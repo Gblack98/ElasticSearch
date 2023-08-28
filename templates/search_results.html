@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résultats de la recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <h1>Moteur de Recherche de Film_Streaming.fr</h1>
+            <form action="/search" method="get">
+                <input type="text" name="q" value="{{ query }}" placeholder="Rechercher sur ISF..." />
+                <button type="submit">Rechercher</button>
+            </form>
+        </div>
+        <div class="results">
+            {% if results %}
+                <ul class="results-list">
+                    {% for result in results %}
+                        <li class="result-item">
+                            <h2>{{ result._source.titre }}</h2>
+                            <p>Année: {{ result._source.annee }}</p>
+                            <p>Version: {{ result._source.version }}</p>
+                            <p>Qualité: {{ result._source.qualite }}</p>
+                            <img src="{{ result._source.image_url }}" alt="{{ result._source.titre }}" />
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-results">Aucun résultat trouvé pour "{{ query }}".</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

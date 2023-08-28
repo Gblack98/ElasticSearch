@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/illustration-geometric-shapes-with-neon-laser-lights-great-backgrounds-wallpapers.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box h1 {
+    font-size: 32px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.result-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.result-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.result-item p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.result-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
